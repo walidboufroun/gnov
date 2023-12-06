@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Test Page with PyScript</title>
+    <script src="https://cdn.jsdelivr.net/npm/pyscript"></script>
 </head>
 <body>
-    GNOV - SITE
-    <a href="file.py" >Python</a>
+    <div id="output"></div>
+
+    <script pyscript>
+        def say_hello():
+            print("Hello, world!")
+            document.getElementById("output").innerHTML = "Python said: Hello, world!"
+
+        say_hello()
+    </script>
 </body>
 </html>
